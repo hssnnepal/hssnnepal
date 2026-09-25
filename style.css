@@ -1,0 +1,334 @@
+/* Custom styles for Human Social Service Nepal (HSSN) */
+:root {
+  --hssn-red: #c5221f;
+  --hssn-dark-red: #9e1412;
+  --hssn-light-red: #fff1f0;
+  --hssn-gold: #d97706;
+  --hssn-dark: #1e293b;
+  --hssn-muted: #64748b;
+  --hssn-light: #f8fafc;
+  --hssn-cream: #faf7f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #334155;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.font-nepali {
+  font-family: 'Mukta', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar-brand-text {
+  line-height: 1.2;
+}
+
+.navbar-brand-nepali {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #334155 !important;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--hssn-red) !important;
+  background-color: var(--hssn-light-red);
+}
+
+/* Buttons */
+.btn-hssn-primary {
+  background-color: var(--hssn-red);
+  color: #ffffff;
+  border: 1px solid var(--hssn-red);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-hssn-primary:hover, .btn-hssn-primary:focus {
+  background-color: var(--hssn-dark-red);
+  border-color: var(--hssn-dark-red);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 34, 31, 0.25);
+}
+
+.btn-hssn-outline {
+  background-color: transparent;
+  color: var(--hssn-red);
+  border: 2px solid var(--hssn-red);
+  font-weight: 600;
+  padding: 0.6rem 1.35rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-hssn-outline:hover, .btn-hssn-outline:focus {
+  background-color: var(--hssn-light-red);
+  color: var(--hssn-dark-red);
+  border-color: var(--hssn-dark-red);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #fff8f0 100%);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #fee2e2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  background-color: #fee2e2;
+  color: var(--hssn-dark-red);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.hero-seal-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero-seal-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(197, 34, 31, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(20px);
+}
+
+/* Stat Cards */
+.stat-box {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--hssn-red);
+  line-height: 1;
+}
+
+/* Section Headings */
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--hssn-red);
+  background: var(--hssn-light-red);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* Cards */
+.hssn-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.hssn-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.icon-wrapper-lg {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.icon-red {
+  background-color: var(--hssn-light-red);
+  color: var(--hssn-red);
+}
+
+.icon-gold {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.icon-blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.icon-green {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* Activities list */
+.achievement-badge {
+  width: 34px;
+  height: 34px;
+  background-color: var(--hssn-light-red);
+  color: var(--hssn-red);
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Contact / Inquiry Box */
+.inquiry-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.07);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--hssn-red);
+  box-shadow: 0 0 0 0.25rem rgba(197, 34, 31, 0.15);
+}
+
+/* Partner badges */
+.partner-pill {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.2s;
+}
+
+.partner-pill:hover {
+  border-color: var(--hssn-red);
+  color: var(--hssn-red);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(197, 34, 31, 0.08);
+}
+
+/* Gallery Cards */
+.gallery-img-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+  transition: transform 0.2s;
+}
+
+.gallery-img-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Footer */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section .d-flex.flex-wrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand-text .fs-5 {
+    font-size: 1rem !important;
+  }
+  .navbar-brand-nepali {
+    font-size: 0.75rem !important;
+  }
+  .hssn-seal-svg {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  .display-4 {
+    font-size: 2.1rem;
+  }
+  .inquiry-card {
+    padding: 1.5rem !important;
+  }
+}
