@@ -200,4 +200,4 @@ The website follows HSSN's official color palette:
 - **Domain & Hosting (.com.np)**:
   Configure your `.com.np` DNS records to point to your hosting nameservers, upload `index.html`, `style.css`, `script.js`, `sitemap.xml`, `robots.txt`, and `images/` to the `public_html` folder, and enable an SSL certificate.
 - **Google Search Console**:
-  Add `https://yourdomain.com.np` in Google Search Console, submit `/sitemap.xml`, and request indexing.
+  Add `https://humansocialservicenepal.org.np` in Google Search Console, submit `sitemap.xml`, and request indexing via URL inspection.
