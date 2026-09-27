@@ -22,6 +22,32 @@ body {
   line-height: 1.6;
 }
 
+/* Accessibility: Skip to Content */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--hssn-red);
+  color: #ffffff !important;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid #000000;
+}
+
+/* Accessible focus ring for interactive elements */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(197, 34, 31, 0.6) !important;
+  outline-offset: 2px;
+}
+
 .font-nepali {
   font-family: 'Mukta', 'Plus Jakarta Sans', sans-serif;
 }
