@@ -7,29 +7,33 @@
 
 ## 1. Project Overview
 
-This website is a clean, modern, and responsive official web portal built for **Human Social Service Nepal (HSSN)**. It has been crafted using clean, industry-standard web technologies: **HTML5**, **Bootstrap 5.3 (via CDN)**, **CSS3**, and **vanilla JavaScript**.
+This website is a clean, modern, and responsive official web portal built for **Human Social Service Nepal (HSSN)**. It has been hand-crafted using clean, industry-standard web technologies: **HTML5**, **Bootstrap 5.3 (via CDN)**, **CSS3**, and **vanilla JavaScript**.
 
-The application is completely self-contained, light, and optimized for instant loading on both mobile and desktop devices. It requires no complex build pipelines or server frameworks.
+The application is completely self-contained, lightweight, and optimized for fast loading on both mobile and desktop devices. It requires no complex build pipelines, bundlers, or server frameworks.
 
 ---
 
 ## 2. Directory Structure
 
 ```text
-├── index.html          # Main HTML structure, content, SEO tags & Schema.org JSON-LD
+├── index.html          # Main HTML structure, content, SEO meta tags & Schema.org JSON-LD
 ├── style.css           # Custom styling, color palette, cards, and responsive rules
 ├── script.js           # Client-side JavaScript for form validation & Web3Forms integration
+├── sitemap.xml         # XML Sitemap for search engines (Google, Bing)
+├── robots.txt          # Search engine crawler permissions & sitemap pointer
 ├── images/
 │   └── logo.jpg        # Official circular emblem logo (navbar, hero, and footer)
 └── README.md           # Technical documentation
 ```
 
 ### Production Hosting & Deployment
-When deploying to **cPanel, Shared Hosting, Apache, Nginx, GitHub Pages, Netlify, or Vercel**, you simply upload these files:
+When deploying to **cPanel, Shared Hosting, Apache, Nginx, GitHub Pages, Netlify, or Vercel**, you simply upload these production files into your `public_html` root:
 1. `index.html`
 2. `style.css`
 3. `script.js`
-4. `images/logo.jpg` (inside an `images` folder)
+4. `sitemap.xml`
+5. `robots.txt`
+6. `images/logo.jpg` (inside an `images` folder)
 
 No server installation, Node.js runtime, or compilation steps are needed on your production server.
 
@@ -46,6 +50,7 @@ No server installation, Node.js runtime, or compilation steps are needed on your
 | **Styling & Theme** | Custom CSS3 (`style.css`) | Local Stylesheet |
 | **Client-side Interactivity** | Vanilla JavaScript (`script.js`) | Local Script |
 | **Contact Form Gateway** | Web3Forms API | Secure HTTPS Client-side Endpoint |
+| **Search Engine Discovery** | XML Sitemap & Robots.txt | Standard Crawler Protocols |
 
 ---
 
@@ -193,4 +198,6 @@ The website follows HSSN's official color palette:
 - **Form Recipient Change**:
   To route submissions to a different email address, generate a new key on Web3Forms and update the `access_key` in `script.js`.
 - **Domain & Hosting (.com.np)**:
-  Configure your `.com.np` DNS records to point to your hosting nameservers, upload `index.html`, `style.css`, `script.js`, and `images/` to the `public_html` folder, and enable an SSL certificate.
+  Configure your `.com.np` DNS records to point to your hosting nameservers, upload `index.html`, `style.css`, `script.js`, `sitemap.xml`, `robots.txt`, and `images/` to the `public_html` folder, and enable an SSL certificate.
+- **Google Search Console**:
+  Add `https://yourdomain.com.np` in Google Search Console, submit `/sitemap.xml`, and request indexing.
