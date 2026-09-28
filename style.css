@@ -314,6 +314,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transform: translateY(-4px);
 }
 
+/* Bank Account & Donation Styles */
+.bank-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fff7f7 100%);
+  border-color: rgba(197, 34, 31, 0.25) !important;
+}
+
+.bank-icon-badge {
+  box-shadow: 0 4px 10px rgba(197, 34, 31, 0.3);
+}
+
+.copy-btn {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
 /* Footer */
 footer {
   background-color: #0f172a;

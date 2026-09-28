@@ -77,6 +77,9 @@ quickTemplateButtons.forEach(btn => {
     } else if (templateType === 'seed_capital') {
       subjectSelect.value = 'Seed Capital & Entrepreneurship Assistance';
       messageInput.value = 'Namaste, I would like to learn more about the Community-Based Rehabilitation (CBR) seed capital support for entrepreneurs with disabilities.';
+    } else if (templateType === 'donation') {
+      subjectSelect.value = 'Donation & Financial Contribution';
+      messageInput.value = 'Namaste, I have made / would like to make a contribution to Human Social Service Nepal via bank transfer (Everest Bank Limited). Here are my transfer details:';
     } else if (templateType === 'volunteer') {
       subjectSelect.value = 'Volunteer & Community Engagement';
       messageInput.value = 'Hello HSSN team, I am interested in volunteering with Human Social Service Nepal to support community advocacy and disability empowerment programs.';
@@ -164,3 +167,45 @@ if (backToTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+// Bank Account Clipboard Copy Functionality
+const copyButtons = document.querySelectorAll('.copy-btn');
+copyButtons.forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const textToCopy = btn.getAttribute('data-copy');
+    if (!textToCopy) return;
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(textToCopy);
+      } else {
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = textToCopy;
+        tempTextArea.style.position = 'fixed';
+        tempTextArea.style.left = '-999999px';
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+      }
+
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = '<i class="bi bi-check2 text-white"></i> Copied!';
+      btn.classList.add('btn-success');
+      btn.classList.remove('btn-danger', 'btn-outline-secondary');
+
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        btn.classList.remove('btn-success');
+        if (btn.getAttribute('data-copy') === '00300105200761') {
+          btn.classList.add('btn-danger');
+        } else {
+          btn.classList.add('btn-outline-secondary');
+        }
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  });
+});
+

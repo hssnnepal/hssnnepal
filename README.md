@@ -1,33 +1,34 @@
 # Human Social Service Nepal (HSSN) - Website Documentation
 **मानव सामाजिक सेवा नेपाल (HSSN)**  
 *Government Registered Non-Profit Organization • Established 2014 A.D. (२०७० B.S.)*  
-*Location: Chandragiri Municipality, Kathmandu, Nepal*
+*Location: Chandragiri Municipality, Kathmandu, Nepal*  
+*Official Web Portal: [https://humansocialservicenepal.org.np/](https://humansocialservicenepal.org.np/)*
 
 ---
 
 ## 1. Project Overview
 
-This website is a clean, modern, and responsive official web portal built for **Human Social Service Nepal (HSSN)**. It has been hand-crafted using clean, industry-standard web technologies: **HTML5**, **Bootstrap 5.3 (via CDN)**, **CSS3**, and **vanilla JavaScript**.
+This website is the official web portal built for **Human Social Service Nepal (HSSN)**. It has been hand-crafted using clean, industry-standard web technologies: **HTML5**, **Bootstrap 5.3 (via CDN)**, **CSS3**, and **vanilla JavaScript**.
 
-The application is completely self-contained, lightweight, and optimized for fast loading on both mobile and desktop devices. It requires no complex build pipelines, bundlers, or server frameworks.
+The application is lightweight, responsive, accessible, and optimized for search engine indexing on Google. It requires no complex build pipelines, bundlers, or server runtimes.
 
 ---
 
 ## 2. Directory Structure
 
 ```text
-├── index.html          # Main HTML structure, content, SEO meta tags & Schema.org JSON-LD
+├── index.html          # Main HTML structure, donation section, SEO meta tags & Schema.org JSON-LD
 ├── style.css           # Custom styling, color palette, cards, and responsive rules
-├── script.js           # Client-side JavaScript for form validation & Web3Forms integration
-├── sitemap.xml         # XML Sitemap for search engines (Google, Bing)
+├── script.js           # Client-side JavaScript for form validation, Web3Forms & clipboard copy
+├── sitemap.xml         # XML Sitemap configured for Google Search Console
 ├── robots.txt          # Search engine crawler permissions & sitemap pointer
 ├── images/
-│   └── logo.jpg        # Official circular emblem logo (navbar, hero, and footer)
+│   └── logo.jpg        # Official circular emblem logo (navbar, hero, footer & Google favicon)
 └── README.md           # Technical documentation
 ```
 
 ### Production Hosting & Deployment
-When deploying to **cPanel, Shared Hosting, Apache, Nginx, GitHub Pages, Netlify, or Vercel**, you simply upload these production files into your `public_html` root:
+When deploying to **cPanel, Shared Hosting, Apache, Nginx, GitHub Pages, Netlify, or Vercel**, upload these files into your `public_html` root:
 1. `index.html`
 2. `style.css`
 3. `script.js`
@@ -35,7 +36,7 @@ When deploying to **cPanel, Shared Hosting, Apache, Nginx, GitHub Pages, Netlify
 5. `robots.txt`
 6. `images/logo.jpg` (inside an `images` folder)
 
-No server installation, Node.js runtime, or compilation steps are needed on your production server.
+No server installation or Node.js runtime is needed on your production server.
 
 ---
 
@@ -60,21 +61,22 @@ No server installation, Node.js runtime, or compilation steps are needed on your
    - Organization contact numbers: `+977-9860672108`
    - Official emails: `hssnnepal@gmail.com`
    - Establishment badge: *Est. 2014 A.D. (२०७० B.S.)*
-   - Municipality location: Chandragiri, Kathmandu, Nepal
+   - Location: Chandragiri, Kathmandu, Nepal
 
 2. **Main Navigation (`navbar`)**:
-   - Features the high-resolution HSSN circular emblem logo (`images/logo.jpg`)
+   - High-resolution HSSN circular emblem logo (`images/logo.jpg`)
    - Bilingual organization branding (*Human Social Service Nepal* / *मानव सामाजिक सेवा नेपाल*)
-   - Smooth navigation menu links with auto-collapse functionality on mobile devices
+   - Direct navigation menu links with auto-collapse functionality on mobile devices
+   - Highlighted **Donate** and **Inquire** action buttons
 
 3. **Hero Section**:
-   - Core value proposition and mission statement for empowering persons with disabilities, orphans, Dalits, Madhesis, and marginalized groups
+   - Core value proposition and mission statement for empowering persons with disabilities, orphans, and marginalized groups
    - Immediate Call-to-Action (CTA) buttons: "Send an Inquiry" and "Learn About Us"
    - Key impact metrics (10+ Years of Dedication, 15+ Entrepreneurs Seed-Funded, 100% Community Driven)
    - Prominently framed seal emblem card
 
 4. **Organizational Profile (`#about`)**:
-   - Comprehensive background covering the organization's registration and social commitment in Chandragiri, Kathmandu
+   - Background covering registration and social commitment in Chandragiri, Kathmandu
    - Defined Mission & Vision statements
 
 5. **Strategic Objectives (`#objectives`)**:
@@ -96,73 +98,62 @@ No server installation, Node.js runtime, or compilation steps are needed on your
    - 7-Point development program including transit shelter facilities, sustained entrepreneurship mentorship, and disability-inclusive local policies
 
 8. **Institutional Partners**:
-   - Recognizes collaboration with Chandragiri Municipality, Ministry of Social Development (Bagmati Province), NLAWA, and NFDN
+   - Collaborations with Chandragiri Municipality, Ministry of Social Development (Bagmati Province), NLAWA, and NFDN
 
 9. **Program & Field Glimpses (`#glimpses`)**:
    - Visual summary cards highlighting medical camps, workshops, seed capital distribution, and policy discussions
 
-10. **Inquiry & Contact System (`#inquiry`)**:
+10. **Donation & Bank Account Details (`#donate`)**:
+    - **Bank Name**: Everest Bank Limited
+    - **Branch**: Satungal Branch, Kathmandu
+    - **Account Holder Name**: MANAV SAMAJIK SEWA NEPAL (मानव सामाजिक सेवा नेपाल)
+    - **Account Number**: `00300105200761`
+    - **SWIFT Code**: `EVBLNPKA`
+    - **Interactive Clipboard Copy**: One-click buttons to copy account number, holder name, and SWIFT code
+    - **Transparency & Verification Notice**: Instructions for submitting deposit vouchers or screenshots for official receipts
+
+11. **Inquiry & Contact System (`#inquiry`)**:
     - **Leadership Contact Card**:
       - President: **Ravi Yasmali**
       - Direct Phone: `+977-9860672108`
       - Primary Emails: `rv.thapa24@gmail.com`, `hssnnepal@gmail.com`
     - **Quick Template Chips**:
-      - One-click buttons to autofill inquiry topics for vocational training, health camps, volunteer opportunities, seed capital, or CSR partnerships
+      - One-click buttons to autofill inquiry topics for vocational training, health camps, volunteer opportunities, seed capital, or donation/bank transfer notifications
     - **Interactive Submission Form**:
       - Real-time client-side validation
       - Spam prevention honeypot
       - Instant feedback dialogs on submission
 
-11. **Footer**:
-    - Complete sitemap, program summary, direct contact details, legal copyright, and floating scroll-to-top button
+12. **Footer**:
+    - Complete sitemap, program summary, direct contact details, bank donation links, legal copyright, and floating scroll-to-top button
 
 ---
 
-## 5. Contact Form Configuration
+## 5. Bank Account & Donation Details
+
+| Detail | Information |
+|---|---|
+| **Bank Name** | Everest Bank Limited |
+| **Branch** | Satungal Branch, Kathmandu |
+| **Account Name** | MANAV SAMAJIK SEWA NEPAL |
+| **Account Number** | `00300105200761` |
+| **SWIFT Code** | `EVBLNPKA` |
+| **Voucher Submission** | Email to `hssnnepal@gmail.com` or call `+977-9860672108` |
+
+---
+
+## 6. Google Search Optimization & Logo Display
+
+To ensure Google shows the official emblem logo next to your search results:
+- **Favicon Links**: High-resolution icons in 192x192 and 512x512 sizes pointing to `https://humansocialservicenepal.org.np/images/logo.jpg`.
+- **Schema.org Structured Data**: Configured with `ImageObject` defining the official NGO logo for Googlebot.
+- **Sitemap**: Submitted via Google Search Console at `https://humansocialservicenepal.org.np/sitemap.xml`.
+
+---
+
+## 7. Contact Form Configuration
 
 The contact form is connected to Web3Forms to deliver inquiries directly to the organization's email inbox without requiring any server-side scripts or database maintenance.
-
-### Submission Workflow in `script.js`:
-```javascript
-const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    if (!validateInputs()) {
-      return;
-    }
-
-    const formData = new FormData(form);
-    formData.append("access_key", "d73fcdc5-6657-4312-a451-089d34a13470");
-
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = 'Sending...';
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok && data.success) {
-            alert("Success! Your message has been sent to Human Social Service Nepal.");
-            form.reset();
-        } else {
-            alert("Error: " + (data.message || "Failed to submit. Please try again."));
-        }
-    } catch (error) {
-        alert("Something went wrong. Please check your connection and try again.");
-    } finally {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }
-});
-```
 
 ### Form Fields & Validation:
 | Field | Type | Validation Rule |
@@ -177,7 +168,7 @@ form.addEventListener('submit', async (e) => {
 
 ---
 
-## 6. Color Scheme & Brand Identity
+## 8. Color Scheme & Brand Identity
 
 The website follows HSSN's official color palette:
 
@@ -189,15 +180,15 @@ The website follows HSSN's official color palette:
 
 ---
 
-## 7. Site Maintenance & Updates
+## 9. Site Maintenance & Updates
 
 - **Contact Info Updates**:
   Search for `+977-9860672108` or `hssnnepal@gmail.com` in `index.html` to update phone numbers, emails, or office addresses.
+- **Bank Account Updates**:
+  Search for `#donate` or `00300105200761` in `index.html` and `script.js` to modify account details.
 - **Logo Replacement**:
   Place any updated circular emblem at `images/logo.jpg`.
 - **Form Recipient Change**:
   To route submissions to a different email address, generate a new key on Web3Forms and update the `access_key` in `script.js`.
-- **Domain & Hosting (.com.np)**:
-  Configure your `.com.np` DNS records to point to your hosting nameservers, upload `index.html`, `style.css`, `script.js`, `sitemap.xml`, `robots.txt`, and `images/` to the `public_html` folder, and enable an SSL certificate.
 - **Google Search Console**:
   Add `https://humansocialservicenepal.org.np` in Google Search Console, submit `sitemap.xml`, and request indexing via URL inspection.
