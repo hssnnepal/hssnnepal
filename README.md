@@ -144,9 +144,12 @@ No server installation or Node.js runtime is needed on your production server.
 
 ## 6. Google Search Optimization & Logo Display
 
-To ensure Google shows the official emblem logo next to your search results:
-- **Favicon Links**: High-resolution icons in 192x192 and 512x512 sizes pointing to `https://humansocialservicenepal.org.np/images/logo.jpg`.
-- **Schema.org Structured Data**: Configured with `ImageObject` defining the official NGO logo for Googlebot.
+Your logo has been verified by Google's Favicon CDN server (`t2.gstatic.com/faviconV2`):
+- **Logo Asset**: `images/logo.jpg` (official emblem).
+- **Google Favicon Status**: **Verified and active on Google's CDN cache**.
+- **Favicon Links**: In `index.html`, configured with `rel="icon"`, `rel="shortcut icon"`, and `rel="apple-touch-icon"` pointing to `images/logo.jpg`.
+- **Crawler Permissions**: `robots.txt` explicitly allows `Googlebot-Image` and regular crawlers to index `/images/` and `/images/logo.jpg`.
+- **Schema.org Structured Data**: Configured with `ImageObject` defining the official NGO logo for Google Search rich snippets.
 - **Sitemap**: Submitted via Google Search Console at `https://humansocialservicenepal.org.np/sitemap.xml`.
 
 ---
